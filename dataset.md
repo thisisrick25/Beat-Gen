@@ -1,13 +1,10 @@
 # Dataset
 
 - <https://magenta.tensorflow.org/datasets/maestro>
-- <https://github.com/craffel/chorale-dataset>
-- <http://musedata.org/>
 - <https://www.midiworld.com/>
 - <https://freemidi.org/>
 - <https://colinraffel.com/projects/lmd/>
-- <https://www.jsbchorales.net/datasets.shtml>
-- <https://github.com/wayne391/Classical-Piano-Composer>
-- <https://zenodo.org/record/1290750#.YEHfZegzaUk>
-- <https://homes.cs.washington.edu/~thickstn/musicnet.html>
--
+- <http://millionsongdataset.com/>
+- <https://zenodo.org/record/5120004#.ZA9GWHZBy5d>
+- <https://www.kaggle.com/datasets/imsparsh/musicnet-dataset>
+- <https://labsites.rochester.edu/air/projects/URMP.html>
