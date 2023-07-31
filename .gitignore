@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # dataset
-maestro-v3.0.0-midi
+maestro-v3.0.0

@@ -81,7 +81,7 @@ def generate_music(model, note_to_int, duration_to_int, int_to_note, int_to_dura
     generated_notes = [start_note]
     generated_durations = [start_duration]
     for i in range(500):
-    input_seq = np.zeros((1, sequence_length, 2))
+        input_seq = np.zeros((1, sequence_length, 2))
     input_seq[0, :, 0] = generated_notes[-sequence_length:]
     input_seq[0, :, 1] = generated_durations[-sequence_length:]
     prediction = model.predict(input_seq)[0]
@@ -92,6 +92,15 @@ def generate_music(model, note_to_int, duration_to_int, int_to_note, int_to_dura
     generated_notes = [int_to_note[note] for note in generated_notes]
     generated_durations = [int_to_duration[duration] for duration in generated_durations]
     return generate_midi(generated_notes, generated_durations)
+
+    def sample(preds, temperature=1.0):
+    # Helper function to sample an index from a probability array
+    preds = np.asarray(preds).astype('float64')
+    preds = np.log(preds) / temperature
+    exp_preds = np.exp(preds)
+    preds = exp_preds / np.sum(exp_preds)
+    probas = np.random.multinomial(1, preds, 1)
+    return np.argmax(probas)
 
 def generate_midi(notes, durations):
     """
